@@ -1,0 +1,20 @@
+SELECT * FROM `vote`
+
+CREATE TABLE `vote`(     
+    `id` int auto_increment primary key,
+    `name` VARCHAR(30),  
+    `options_content` text,  
+    `score` int
+
+);
+CREATE TABLE `users`(     
+    `id` VARCHAR(10) UNIQUE,
+    `name` VARCHAR(30)
+	
+);
+
+INSERT INTO vote (name,options_content,score) VALUES('周杰倫','歌手',0);
+INSERT INTO vote (name,options_content,score) VALUES('吳宗憲','歌手',0);
+
+
+UPDATE vote SET score = score+1 WHERE name = '周杰倫'
